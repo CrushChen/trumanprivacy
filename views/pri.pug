@@ -1,0 +1,58 @@
+extends ui_layout_no
+block content
+	.header 
+		.ui.grid
+			.row
+				.six.wide.column
+					<h1>Your story</h1>
+					.ui.section.divider
+					.ui.fluid.icon.input
+						input(type='textarea' placeholder='Say something about this...')
+					<br><br><br><br><br><br><br><br><br><br>
+					.centered.row
+						select#search-select.ui.search.selection.dropdown
+							option(value='') Tag Friend
+							option(value='AL') Justen Kitsune
+							option(value='AK') Matt
+						.ui.buttons
+							button.ui.button Cancel
+							| 
+							button.ui.positive.button#pri Share
+				.eight.wide.column
+					<h3>Preview</h3>
+
+					a.image(href='#')
+					img.ui.fluid.image(src='/post_pictures/11.jpg')
+			.row
+				.column 
+
+
+
+	.ui.tiny.nudge.modal
+		.header Are you sure?
+		.content
+			case condis
+				when "aod" : p You are about to add this photo to Na’s Timeline and your own. Please note that both Na’s friends and yours can see your post, reshare this photo, and have access to your information.
+				when "aon" : p You have only posted 2 photos to other people’s Timeline in the past 12 months.
+				when "asd" : p You are about to add this photo to Na’s Timeline and your own. Please note that both Na’s friends and yours can see your post, reshare this photo, and have access to Na’s information.
+				when "asn" : p Na has only posted 2 photos to her Timeline in the past 12 months.
+				when "cod" : p You are about to add this photo to Na’s Timeline and your own. Please note that, by tagging Na, Na will have edit rights to this photo, and the information you added to this photo, including caption, tagging, etc.
+				when "con" : p You have only tagged other people in your own photos 2 times in the past 12 months.
+				when "csd" : p You are about to add this photo to Na’s Timeline and your own. Please note that Na cannot change your sharing of this photo, or the information you added to this photo, including caption, tagging, etc.
+				when "csn" : p Na has only been tagged in 2 photos in the past 12 months
+				when "eod" : p You are about to add this photo to Na’s Timeline and your own. Please note that Na’s friends outside your network can also see you tagged in this photo, view your profile, and/or reshare this photo.
+				when "eon" : p Na has 327 friends outside of your network
+				when "esd" : p You are about to add this photo to Na’s Timeline and your own. Please note that your friends outside of Na’s network can see Na tagged in this photo, view her profile, and/or reshare this photo.
+				when "esn" : p You have 327 friends outside of Na’s network.
+				default: p you need to select one case 
+		.actions
+			select#search-select.ui.search.selection.dropdown
+				option(value='') Privacy Seeting 
+				option(value='OM') Only Me
+				option(value='PB') Public
+				option(value='FD') Friends
+			.ui.approve.button Yes
+			.ui.cancel.button No
+
+
+			//  /pri?c=pri1
