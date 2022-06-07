@@ -7,17 +7,17 @@ block content
 					<h1>Your story</h1>
 					.ui.section.divider
 					.ui.fluid.icon.input
-						input(type='textarea' placeholder='Say something about this...')
-					<br><br><br><br><br><br><br><br><br><br>
+						input(type='textarea' placeholder='What is on you mind?' style='min-height:100px')
+					<br><br><br><br><br><br><br><br>
+					
 					.centered.row
-						select#search-select.ui.search.selection.dropdown
-							option(value='') Tag Friend
-							option(value='AL') Justen Kitsune
-							option(value='AK') Matt
-						.ui.buttons
-							button.ui.button Cancel
-							| 
+						.ui.image.label
+							img(src='/profile_pictures/0.jpg')
+							|   Adrienne
+							i.delete.icon
+						.ui.buttons 
 							button.ui.positive.button#pri Share
+
 				.eight.wide.column
 					<h3>Preview</h3>
 
@@ -47,12 +47,12 @@ block content
 				default: p you need to select one case 
 		.actions
 			select#search-select.ui.search.selection.dropdown
-				option(value='') Privacy Seeting 
-				option(value='OM') Only Me
+				option(value='' ) Select Audience 
+				option(value='OM') Publicssss
 				option(value='PB') Public
 				option(value='FD') Friends
-			.ui.approve.button Yes
-			.ui.cancel.button No
+			.ui.approve.button POST
+			.ui.cancel.button CANCEL
 
 
 			//  /pri?c=pri1
