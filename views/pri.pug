@@ -9,11 +9,11 @@ block content
 					.ui.fluid.icon.input
 						input(type='textarea' placeholder='What is on you mind?' style='min-height:100px')
 					<br><br><br><br><br><br><br><br>
-					
+
 					.centered.row
 						.ui.image.label
 							img(src='/profile_pictures/0.jpg')
-							|   Adrienne
+							span=name
 							i.delete.icon
 						.ui.buttons 
 							button.ui.positive.button#pri Share
@@ -28,7 +28,7 @@ block content
 
 
 
-	.ui.tiny.nudge.modal
+	.ui.nudge.modal
 		.header Are you sure?
 		.content
 			case condis
@@ -46,11 +46,23 @@ block content
 				when "esn" : p You have 327 friends outside of Na’s network.
 				default: p you need to select one case 
 		.actions
-			select#search-select.ui.search.selection.dropdown
-				option(value='' ) Select Audience 
-				option(value='OM') Publicssss
-				option(value='PB') Public
-				option(value='FD') Friends
+			.ui.floating.fluid.labeled.icon.dropdown.button
+				span.text Select Audience
+				.menu
+					.item
+						i.globe.icon Public
+					.header
+						| Anyone on or off Facebook
+					.item
+						i.users.icon Friends
+					.header
+						| Your friends on Facebook
+					.item
+						i.user.icon Specific Friends
+					.header
+						| Only show to some friends
+					.item
+						i.lock.icon Only me
 			.ui.approve.button POST
 			.ui.cancel.button CANCEL
 

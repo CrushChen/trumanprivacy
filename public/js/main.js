@@ -101,14 +101,24 @@ $(window).on("load", function() {
   $('#pri')
   .on('click', function() {
     console.log("Submit the junks!!!!")
-    $('.ui.tiny.nudge.modal').modal('show');
+    $('.ui.nudge.modal').modal('show');
   });
-  $('.ui.dropdown').dropdown();
+
+  $('.ui.dropdown')
+  .dropdown({
+    direction: 'downward'
+  });
+
+  /*$('.dropdown')
+  .dropdown({
+    direction: 'downward'
+  })
+;
   $('.category.example .ui.dropdown')
   .dropdown({
     allowCategorySelection: true
   })
-;
+;*/
 
 
 

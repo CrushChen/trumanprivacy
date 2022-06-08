@@ -70,6 +70,8 @@
   * API keys and Passport configuration.
   */
  const passportConfig = require('./config/passport');
+const { mainModule } = require('process');
+const { DH_CHECK_P_NOT_SAFE_PRIME } = require('constants');
  
  /**
   * Create Express server.
@@ -292,12 +294,14 @@
      title: 'Test Comments'
    });
  });
- 
+
+
  app.get('/pri', function (req, res) {
    console.log("@@@@@query    ",req.query.c);
    res.render('pri', {
      title: 'Test Privacy',
-     condis: req.query.c
+     condis: req.query.c,
+     name: req.query.n
    });
  });
  
