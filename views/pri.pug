@@ -17,6 +17,7 @@ block content
 							i.delete.icon
 						.ui.buttons 
 							button.ui.positive.button#pri Share
+						
 
 				.eight.wide.column
 					<h3>Preview</h3>
@@ -46,23 +47,35 @@ block content
 				when "esn" : p You have 327 friends outside of Na’s network.
 				default: p you need to select one case 
 		.actions
-			.ui.floating.fluid.labeled.icon.dropdown.button
-				span.text Select Audience
+			.ui.floating.fluid.labeled.icon.dropdown.button(style=' width: 250px;')
+				span.text  
+					i.globe.icon 
+					| Public
 				.menu
+					.p Who can see your post?
+					.header Your post will show up in Feed, on your profile and in search results.
+					.divider
 					.item
-						i.globe.icon Public
+						i.globe.icon 
+						| Public
 					.header
 						| Anyone on or off Facebook
+					.divider
 					.item
-						i.users.icon Friends
+						i.users.icon 
+						| Friends(+)
 					.header
 						| Your friends on Facebook
+					.divider
 					.item
-						i.user.icon Specific Friends
+						i.user.icon 
+						| Specific Friends
 					.header
 						| Only show to some friends
+					.divider
 					.item
-						i.lock.icon Only me
+						i.lock.icon 
+						| Only me
 			.ui.approve.button POST
 			.ui.cancel.button CANCEL
 
