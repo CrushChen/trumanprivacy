@@ -301,7 +301,9 @@ const { DH_CHECK_P_NOT_SAFE_PRIME } = require('constants');
    res.render('pri', {
      title: 'Test Privacy',
      condis: req.query.c,
-     name: req.query.n
+     fname: req.query.fna,
+     uname: req.query.una,
+     number: req.query.nu
    });
  });
  
