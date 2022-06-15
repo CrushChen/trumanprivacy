@@ -1,30 +1,28 @@
 extends ui_layout_facebook
 block content
-	link(href='https://unpkg.com/intro.js/minified/introjs.min.css' rel='stylesheet')
-	link(href='https://unpkg.com/intro.js/themes/introjs-modern.css' rel='stylesheet')
 	.header 
 		.ui.grid
 			.row
 				.three.wide.column
-					h1.ti Bestie 
-					.ui.section.divider
+					h1 Bestie 
 					p Bestie is used to do experimental research to study interpersonal privacy. 
-				.six.wide.column
-					h1.ti Your Post
+				.six.wide.column.ti
+					h1 Your Post
 					.ui.section.divider
 					.ui.fluid.icon.input
 						input.intext(type='textarea' placeholder='What is on you mind?' style='min-height:100px')
-					<br><br><br><br><br><br><br><br>
 
+					<br>
 					.centered.row
 						span Tagged in this photo 
-						a.ui.image.label
-							img.ig(src='/profile_pictures/user-add-icon.png')
+						a.ui.image.label.ig
+							img(src='/profile_pictures/user-add-icon.png')
 							span(style='color: blue')=uname 
 						span (you)
 						a.ui.image.label
 							img.ig(src='/profile_pictures/user-add-icon.png')
 							span(style='color: blue')=fname
+					<br><br><br>
 						.ui.buttons 
 							button.ui.blue.button#pri Share
 
@@ -206,19 +204,19 @@ block content
 		introJs().setOptions({
 			steps: [{
 				title: 'Welcome',
-				intro: 'welcome to our website' 
+				intro: 'welcome to Bestie!' 
 				},
 				{
 				element: document.querySelector('.ti'),
-				intro: 'This is our story'
+				intro: 'Create your post here'
 				},
 				{
 				element: document.querySelector('.intext'),
-				intro: 'And this is text area'
+				intro: 'Add your comment here'
 				},
 				{
 				element: document.querySelector('.ig'),
-				intro: 'This is our photo'
+				intro: 'Here is your tagged friend'
 				}]
 		}).start();
 
