@@ -10,42 +10,44 @@
               i.search.icon
             .results  
       .middle.menu
-        .ui.grid
-          .three.wide.column
-            i.big.home.icon 
-          .three.wide.column
-            i.big.users.icon
-          .three.wide.column
-            i.big.tv.icon
-          .three.wide.column
-            i.big.shop.icon
-          .three.wide.column
-            i.big.user.circle.outline.icon
+        a.item
+          .ui.grid
+            .three.wide.column
+              i.big.home.icon 
+            .three.wide.column
+              i.big.users.icon
+            .three.wide.column
+              i.big.tv.icon
+            .three.wide.column
+              i.big.shop.icon
+            .three.wide.column
+              i.big.user.circle.outline.icon
       |  
       .right.menu
-        if !user
-          i.big.th.icon
-          i.big.facebook.messenger.icon
-          i.big.bell.icon
-        else
-          a.item.newpost
-            i.big.write.square.icon
-          a.item(href='/notifications') 
-            i.big.alarm.icon
-          .ui.simple.dropdown.item
-            if user.profile.picture
-              img.ui.mini.spaced.circular.image(src='/user_post/'+user.profile.picture)
-            else
-              img.ui.mini.spaced.circular.image(src=user.gravatar(60))
-            |
-            span= user.profile.name || user.username || user.id
-            i.dropdown.icon
-            .menu
-              a.item(href='/account') My Account
-              .divider
-              a.item(href='/me') My Profile
-              .divider
-              a.item(href='/logout') Logout
+        a.item
+          if !user
+            i.big.th.icon
+            i.big.facebook.messenger.icon
+            i.big.bell.icon
+          else
+            a.item.newpost
+              i.big.write.square.icon
+            a.item(href='/notifications') 
+              i.big.alarm.icon
+            .ui.simple.dropdown.item
+              if user.profile.picture
+                img.ui.mini.spaced.circular.image(src='/user_post/'+user.profile.picture)
+              else
+                img.ui.mini.spaced.circular.image(src=user.gravatar(60))
+              |
+              span= user.profile.name || user.username || user.id
+              i.dropdown.icon
+              .menu
+                a.item(href='/account') My Account
+                .divider
+                a.item(href='/me') My Profile
+                .divider
+                a.item(href='/logout') Logout
 .mobile.only.row
   .ui.fluid.top.fixed.four.item.menu
     a.item(href='/')
