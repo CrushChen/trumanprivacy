@@ -61,8 +61,8 @@
     "supertest": "^3.4.2"
   },
   "engines": {
-    "node": ">=8.16.0",
-    "npm": ">=6.4.1"
+    "node": "16.x",
+    "npm": "8.5.5"
   },
   "eslintConfig": {
     "extends": "airbnb-base",

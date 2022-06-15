@@ -43,6 +43,9 @@ $(window).on("load", function() {
     })
   ;
 
+
+  
+
   //get add new feed post modal to work
   $("#newpost, a.item.newpost").click(function () {
     $(' .ui.tiny.post.modal').modal('show'); 
