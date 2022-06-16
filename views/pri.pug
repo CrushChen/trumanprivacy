@@ -40,7 +40,7 @@ block content
 		.header(style='font-size:30px;') Are you sure?
 		.content
 			case condis
-				when "aod" : p(style='font-size:20px;') 
+				when "asd" : p(style='font-size:20px;') 
 					| You are about to add this photo to 
 					a.ui.image.label
 						img.ig(src='/profile_pictures/user-add-icon.png')
@@ -52,7 +52,7 @@ block content
 						img.ig(src='/profile_pictures/user-add-icon.png')
 						span(style='font-size:20px;color: blue')=fname
 					| ’s friends and yours can see your post, reshare this photo, and have access to your information.
-				when "aon" : p 
+				when "asn" : p 
 					| You have only posted 
 					span(style='color: blue') 2 
 					| photos to other people’s 
@@ -60,7 +60,7 @@ block content
 					| in the past 
 					span(style='color: blue') 12 
 					| months.
-				when "asd" : p 
+				when "aod" : p 
 					| You are about to add this photo to 
 					a.ui.image.label
 						img.ig(src='/profile_pictures/user-add-icon.png')
@@ -74,7 +74,7 @@ block content
 						img.ig(src='/profile_pictures/user-add-icon.png')
 						span(style='font-size:20px;color: blue')=fname
 					| ’s information.
-				when "asn" : p 
+				when "aon" : p 
 					a.ui.image.label
 						img.ig(src='/profile_pictures/user-add-icon.png')
 						span(style='font-size:20px;color: blue')=fname
@@ -85,7 +85,7 @@ block content
 					| in the past 
 					span(style='color: blue') 12 
 					| months.
-				when "cod" : p 
+				when "csd" : p 
 					| You are about to add this photo to 
 					a.ui.image.label
 						img.ig(src='/profile_pictures/user-add-icon.png')
@@ -101,13 +101,13 @@ block content
 						img.ig(src='/profile_pictures/user-add-icon.png')
 						span(style='font-size:20px;color: blue')=fname
 					| will have edit rights to this photo, and the information you added to this photo, including caption, tagging, etc.
-				when "con" : p 
+				when "csn" : p 
 					| You have only tagged other people in your own photos 
 					span(style='color: blue') 2 
 					| times in the past 
 					span(style='color: blue') 12 
 					| months.
-				when "csd" : p 
+				when "cod" : p 
 					| You are about to add this photo to 
 					a.ui.image.label
 						img.ig(src='/profile_pictures/user-add-icon.png')
@@ -115,7 +115,7 @@ block content
 					| ’s 
 					span(style='color: blue') Timeline 
 					| and your own. Please note that Na cannot change your sharing of this photo, or the information you added to this photo, including caption, tagging, etc.
-				when "csn" : p 
+				when "con" : p 
 					a.ui.image.label
 						img.ig(src='/profile_pictures/user-add-icon.png')
 						span(style='font-size:20px;color: blue')=fname
@@ -124,7 +124,7 @@ block content
 					| photos in the past 
 					span(style='color: blue') 12 
 					| months
-				when "eod" : p 
+				when "esd" : p 
 					| You are about to add this photo to 
 					a.ui.image.label
 						img.ig(src='/profile_pictures/user-add-icon.png')
@@ -136,12 +136,12 @@ block content
 						img.ig(src='/profile_pictures/user-add-icon.png')
 						span(style='font-size:20px;color: blue')=fname
 					| ’s friends outside your network can also see you tagged in this photo, view your profile, and/or reshare this photo.
-				when "eon" : p 
+				when "esn" : p 
 					a.ui.image.label
 						img.ig(src='/profile_pictures/user-add-icon.png')
 						span(style='font-size:20px;color: blue')=fname
 					| has #{number} friends outside of your network
-				when "esd" : p 
+				when "eod" : p 
 					| You are about to add this photo to 
 					a.ui.image.label
 						img.ig(src='/profile_pictures/user-add-icon.png')
@@ -157,7 +157,7 @@ block content
 						img.ig(src='/profile_pictures/user-add-icon.png')
 						span(style='font-size:20px;color: blue')=fname
 					| tagged in this photo, view her profile, and/or reshare this photo.
-				when "esn" : p 
+				when "eon" : p 
 					| You have #{number} friends outside of 
 					a.ui.image.label
 						img.ig(src='/profile_pictures/user-add-icon.png')
