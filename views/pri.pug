@@ -202,6 +202,9 @@ block content
 	//add intro
 	script.
 		introJs().setOptions({
+			"skipLabel": "",
+			exitOnOverlayClick: false,
+
 			steps: [{
 				title: 'Welcome',
 				intro: 'welcome to Bestie!' 
@@ -212,7 +215,7 @@ block content
 				},
 				{
 				element: document.querySelector('.intext'),
-				intro: 'Add your comment here'
+				intro: 'Add your thoughts here'
 				},
 				{
 				element: document.querySelector('.ig'),
