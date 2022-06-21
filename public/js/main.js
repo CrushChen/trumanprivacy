@@ -212,7 +212,6 @@ $('.right.floated.time.meta, .date').each(function() {
     window.location.href='/account';
   });
 
-
 ////////////////////
 $("input.newcomment").keyup(function(event) {
     //i.big.send.link.icon
