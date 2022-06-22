@@ -112,6 +112,7 @@ $(window).on("load", function() {
     direction: 'downward'
   });
 
+
   /*$('.dropdown')
   .dropdown({
     direction: 'downward'
@@ -212,6 +213,18 @@ $('.right.floated.time.meta, .date').each(function() {
     window.location.href='/account';
   });
 
+  $(".carousel").swipe({
+
+    swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
+  
+      if (direction == 'left') $(this).carousel('next');
+      if (direction == 'right') $(this).carousel('prev');
+  
+    },
+    allowPageScroll:"vertical"
+  
+  });
+  
 ////////////////////
 $("input.newcomment").keyup(function(event) {
     //i.big.send.link.icon
