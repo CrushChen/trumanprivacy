@@ -56,6 +56,8 @@
   */
  //dotenv.config({ path: '.env.example' });
  dotenv.config({ path: '.env' });
+ console.log("URL is "+process.env.MONGODB_URI)
+ console.log("secret is "+process.env.SESSION_SECRET)
  
  /**
   * Controllers (route handlers).
