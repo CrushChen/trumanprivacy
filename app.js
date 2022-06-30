@@ -189,7 +189,7 @@ const { DH_CHECK_P_NOT_SAFE_PRIME } = require('constants');
  
  
  
- app.use((req, res, next) => {
+ /* app.use((req, res, next) => {
    if ((req.path === '/api/upload') || (req.path === '/post/new') || (req.path === '/account/profile') || (req.path === '/account/signup_info_post')) {
      console.log("Not checking CSRF - out path now");
      //console.log("@@@@@request is " + req);
@@ -197,7 +197,7 @@ const { DH_CHECK_P_NOT_SAFE_PRIME } = require('constants');
    } else {
      lusca.csrf()(req, res, next);
    }
- });
+ }); */
  
  //app.use(lusca.xframe('SAMEORIGIN'));
  //allow-from https://example.com/
@@ -230,7 +230,7 @@ const { DH_CHECK_P_NOT_SAFE_PRIME } = require('constants');
    next();
  });
  
- var csrf = lusca({ csrf: true });
+ //var csrf = lusca({ csrf: true });
  
  function check(req, res, next) {
      console.log("@@@@@@@@@@@@Body is now ");
@@ -252,9 +252,9 @@ const { DH_CHECK_P_NOT_SAFE_PRIME } = require('constants');
  
  app.get('/newsfeed/:caseId', scriptController.getScriptFeed);
  
- app.post('/post/new', userpostupload.single('picinput'), check, csrf, scriptController.newPost);
+ app.post('/post/new', userpostupload.single('picinput'), check, scriptController.newPost);
  
- app.post('/account/profile', passportConfig.isAuthenticated, useravatarupload.single('picinput'), check, csrf, userController.postUpdateProfile);
+ app.post('/account/profile', passportConfig.isAuthenticated, useravatarupload.single('picinput'), check, userController.postUpdateProfile);
  //app.post('/api/upload', upload.single('myFile'), apiController.postFileUpload);
  
  app.get('/tos', function (req, res) {
@@ -296,16 +296,8 @@ const { DH_CHECK_P_NOT_SAFE_PRIME } = require('constants');
  });
 
 
- app.get('/pri', function (req, res) {
-   console.log("@@@@@query    ",req.query.c);
-   res.render('pri', {
-     title: 'Test Privacy',
-     condis: req.query.c,
-     fname: req.query.fna,
-     uname: req.query.una,
-     number: req.query.nu
-   });
- });
+ app.get('/pri', homeController.getPri);
+ app.post('/priPost', homeController.postPri);
  
  app.get('/login', userController.getLogin);
  app.post('/login', userController.postLogin);
@@ -318,9 +310,9 @@ const { DH_CHECK_P_NOT_SAFE_PRIME } = require('constants');
  app.post('/signup', userController.postSignup);
  
  app.get('/account/signup_info', passportConfig.isAuthenticated, userController.getSignupInfo);
- app.post('/account/signup_info_post', passportConfig.isAuthenticated, useravatarupload.single('picinput'), check, csrf, userController.postSignupInfo);
+ app.post('/account/signup_info_post', passportConfig.isAuthenticated, useravatarupload.single('picinput'), check, userController.postSignupInfo);
  
- app.post('/account/profile', passportConfig.isAuthenticated, useravatarupload.single('picinput'), check, csrf, userController.postUpdateProfile);
+ app.post('/account/profile', passportConfig.isAuthenticated, useravatarupload.single('picinput'), check, userController.postUpdateProfile);
  
  
  app.get('/account', passportConfig.isAuthenticated, userController.getAccount);

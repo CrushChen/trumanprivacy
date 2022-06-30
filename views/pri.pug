@@ -29,7 +29,7 @@ block content
 
 
 				.seven.wide.column
-					<h3>Preview</h3>
+					h3 Preview
 					.ui.equal.width.center.aligned.padded.grid
 						.row
 							.column
@@ -181,35 +181,36 @@ block content
 			.ui.grid
 				.col
 					.ui.labeled.icon.pointing.dropdown.button(style=' width: 250px;')
+						input#choice(type="hidden" name="choice")
 						span.text  Edit Photo Privacy Setting
 						.menu
 							.p Who can see your post?
 							.header Your post will show up in Feed, on your profile and in search results.
 							.divider
-							.item
+							.item(data-value="public")
 								i.globe.icon 
 								| Public
 							.header
 								| Anyone on or off Facebook
 							.divider
-							.item
+							.item(data-value="friends")
 								i.users.icon 
 								| Friends(+)
 							.header
 								| Your friends on Facebook
 							.divider
-							.item
+							.item(data-value="specific_friends")
 								i.user.icon 
 								| Specific Friends
 							.header
 								| Only show to some friends
 							.divider
-							.item
+							.item(data-value="only_best")
 								i.lock.icon 
 								| Only between the Besties
 				.col
-					.ui.cancel.button Cancel
-					.ui.blue.approve.button Post
+					.ui.cancel.button#no Cancel
+					.ui.blue.approve.button#yes Post
 
 
 	//add intro

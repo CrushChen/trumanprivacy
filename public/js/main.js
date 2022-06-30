@@ -100,11 +100,13 @@ $(window).on("load", function() {
         //return true;
         });
 
-  //Sign Up Button
+
+
+  //Privacy!
   $('#pri')
   .on('click', function() {
     console.log("Submit the junks!!!!")
-    $('.ui.nudge.modal').modal('show');
+    $('.ui.nudge.modal').modal({autofocus:false}).modal('show');
   });
 
   $('.ui.dropdown')
@@ -112,17 +114,41 @@ $(window).on("load", function() {
     direction: 'downward'
   });
 
+  let startTime = performance.now();
 
-  /*$('.dropdown')
-  .dropdown({
-    direction: 'downward'
-  })
-;
-  $('.category.example .ui.dropdown')
-  .dropdown({
-    allowCategorySelection: true
-  })
-;*/
+ $('#yes')
+ .on('click', function() {
+  //let c = $('#choice').attr( "value" );
+
+  const params = new Proxy(new URLSearchParams(window.location.search), {
+    get: (searchParams, prop) => searchParams.get(prop),
+  });
+
+  let endTime = performance.now();
+  var time = endTime - startTime;
+  console.log("time is "+time)
+  $.post( "/priPost", { choice: choice.value, time: time, did_post:"true", cond: params.c, id:params.id } );
+  });
+
+ $('#no')
+ .on('click', function() {
+
+  const params = new Proxy(new URLSearchParams(window.location.search), {
+    get: (searchParams, prop) => searchParams.get(prop),
+  });
+
+  let endTime = performance.now();
+  var time = endTime - startTime;
+  console.log("time is "+time)
+  $.post( "/priPost", { choice: choice.value, time: time, did_post:"false", cond: params.c, id:params.id } );
+  });
+
+  //$.post( "/userPost_feed", { postID: postID, new_comment: date, comment_text: text, _csrf : $('meta[name="csrf-token"]').attr('content') } );
+
+
+
+
+  
 
 
 
@@ -145,24 +171,6 @@ function readURL(input) {
         readURL(this);
     });
 
-//Modal to show "other users" in Notifications 
-/*
-$('a.others').click(function(){
-  let key = $(this).attr('key');
-
-
-  $('.ui.long.extrausers.modal#'+key).modal({
-    onVisible: function() {
-      var el = document.querySelector('.ui.long.extrausers.modal#'+key+" div.ui.extra.divided.items");
-      var lazyLoad = new LazyLoad({
-         container: el /// <--- not sure if this works here, read below
-    });
-      
-      
-      
-    }
-  }).modal('show')  
-}); */
 
 //add humanized time to all posts
 $('.right.floated.time.meta, .date').each(function() {
@@ -213,7 +221,7 @@ $('.right.floated.time.meta, .date').each(function() {
     window.location.href='/account';
   });
 
-  $(".carousel").swipe({
+  /*$(".carousel").swipe({
 
     swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
   
@@ -223,7 +231,7 @@ $('.right.floated.time.meta, .date').each(function() {
     },
     allowPageScroll:"vertical"
   
-  });
+  });*/
   
 ////////////////////
 $("input.newcomment").keyup(function(event) {
