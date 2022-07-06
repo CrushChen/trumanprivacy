@@ -128,7 +128,9 @@ $(window).on("load", function() {
   var time = endTime - startTime;
   console.log("time is "+time)
   $.post( "/priPost", { choice: choice.value, time: time, did_post:"true", cond: params.c, id:params.id } );
-  });
+  //go to survey
+  window.location.href = "https://lehigh.co1.qualtrics.com/jfe/form/SV_9AyQbfLp36eBlrg?id="+params.id;
+});
 
  $('#no')
  .on('click', function() {
