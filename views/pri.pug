@@ -50,62 +50,23 @@ block content
 
 
 	.ui.nudge.fullscreen.modal(style='min-height:300px;')
-		.header(style='font-size:30px;') Are you sure?
+		.header(style='font-size:30px;') Do you want to proceed?
 		.content
 			case condis
-				when "asd" : p(style='font-size:20px;') 
-					| You are about to add this photo to 
+				when "as" : p(style='font-size:20px;') 
+					| Please note that you have shared most of your photos with 
+					span(style='color: blue')  selected friends only 
+					| .
+				when "ao" : p 
+					| Please note that 
 					a.ui.image.label
 						img.ig(src='/profile_pictures/user-add-icon.png')
 						span(style='font-size:20px;color: blue')=fname
-					| ’s 
-					span(style='color: blue') Timeline 
-					| and your own. Please note that both 
-					a.ui.image.label
-						img.ig(src='/profile_pictures/user-add-icon.png')
-						span(style='font-size:20px;color: blue')=fname
-					| ’s friends and yours can see your post, reshare this photo, and have access to your information.
-				when "asn" : p 
-					| You have only posted 
-					span(style='color: blue') 2 
-					| photos to other people’s 
-					span(style='color: blue') Timeline 
-					| in the past 
-					span(style='color: blue') 12 
-					| months.
-				when "aod" : p 
-					| You are about to add this photo to 
-					a.ui.image.label
-						img.ig(src='/profile_pictures/user-add-icon.png')
-						span(style='font-size:20px;color: blue')=fname
-					| ’s Timeline and your own. Please note that both 
-					a.ui.image.label
-						img.ig(src='/profile_pictures/user-add-icon.png')
-						span(style='font-size:20px;color: blue')=fname
-					| ’s friends and yours can see your post, reshare this photo, and have access to 
-					a.ui.image.label
-						img.ig(src='/profile_pictures/user-add-icon.png')
-						span(style='font-size:20px;color: blue')=fname
-					| ’s information.
-				when "aon" : p 
-					a.ui.image.label
-						img.ig(src='/profile_pictures/user-add-icon.png')
-						span(style='font-size:20px;color: blue')=fname
-					| has only posted 
-					span(style='color: blue') 2 
-					| photos to her 
-					span(style='color: blue') Timeline
-					| in the past 
-					span(style='color: blue') 12 
-					| months.
-				when "csd" : p 
-					| You are about to add this photo to 
-					a.ui.image.label
-						img.ig(src='/profile_pictures/user-add-icon.png')
-						span(style='font-size:20px;color: blue')=fname
-					| ’s 
-					span(style='color: blue') Timeline 
-					| and your own. Please note that, by tagging 
+					| has shared most of their photos with 
+					span(style='color: blue')  selected friends only 
+					| .
+				when "cs" : p 
+					| Please note that, by tagging 
 					a.ui.image.label
 						img.ig(src='/profile_pictures/user-add-icon.png')
 						span(style='font-size:20px;color: blue')=fname
@@ -113,69 +74,38 @@ block content
 					a.ui.image.label
 						img.ig(src='/profile_pictures/user-add-icon.png')
 						span(style='font-size:20px;color: blue')=fname
-					| will have edit rights to this photo, and the information you added to this photo, including caption, tagging, etc.
-				when "csn" : p 
-					| You have only tagged other people in your own photos 
-					span(style='color: blue') 2 
-					| times in the past 
-					span(style='color: blue') 12 
-					| months.
-				when "cod" : p 
-					| You are about to add this photo to 
+					span(style='color: blue') will have editing rights 
+					| to these photos, the information you added to these photos (e.g., caption, tags), and managing the comments. 
+				when "co" : p 
+					| Please note that 
+					a.ui.image.label
+						img.ig(src='/profile_pictures/user-add-icon.png')
+						span(style='font-size:20px;color: blue')=fname 
+					span(style='color: blue') does not have editing rights 
+					| to these photos, the information you added to these photos (e.g., caption, tags), or managing the comments.
+				when "es" : p 
+					| Please note that 
+					a.ui.image.label
+						img.ig(src='/profile_pictures/user-add-icon.png')
+						span(style='font-size:20px;color: blue')=fname 
+					span(style='color: blue') ’s entire network 
+					| , including friends outside your network, can see you tagged in these photos, reshare the photos, and have access to your information.
+				when "eo" : p 
+					| Please note that
+					span(style='color: blue')  your entire network 
+					| , including friends outside 
 					a.ui.image.label
 						img.ig(src='/profile_pictures/user-add-icon.png')
 						span(style='font-size:20px;color: blue')=fname
-					| ’s 
-					span(style='color: blue') Timeline 
-					| and your own. Please note that Na cannot change your sharing of this photo, or the information you added to this photo, including caption, tagging, etc.
-				when "con" : p 
+					| ’s network, can see 
 					a.ui.image.label
 						img.ig(src='/profile_pictures/user-add-icon.png')
 						span(style='font-size:20px;color: blue')=fname
-					| has only been tagged in 
-					span(style='color: blue') 2 
-					| photos in the past 
-					span(style='color: blue') 12 
-					| months
-				when "esd" : p 
-					| You are about to add this photo to 
+					| tagged in these photos, reshare the photos, and have access to
 					a.ui.image.label
 						img.ig(src='/profile_pictures/user-add-icon.png')
 						span(style='font-size:20px;color: blue')=fname
-					| ’s 
-					span(style='color: blue') Timeline 
-					| and your own. Please note that 
-					a.ui.image.label
-						img.ig(src='/profile_pictures/user-add-icon.png')
-						span(style='font-size:20px;color: blue')=fname
-					| ’s friends outside your network can also see you tagged in this photo, view your profile, and/or reshare this photo.
-				when "esn" : p 
-					a.ui.image.label
-						img.ig(src='/profile_pictures/user-add-icon.png')
-						span(style='font-size:20px;color: blue')=fname
-					| has #{number} friends outside of your network
-				when "eod" : p 
-					| You are about to add this photo to 
-					a.ui.image.label
-						img.ig(src='/profile_pictures/user-add-icon.png')
-						span(style='font-size:20px;color: blue')=fname
-					| ’s 
-					span(style='color: blue') Timeline 
-					| and your own. Please note that your friends outside of 
-					a.ui.image.label
-						img.ig(src='/profile_pictures/user-add-icon.png')
-						span(style='font-size:20px;color: blue')=fname
-					| ’s network can see 
-					a.ui.image.label
-						img.ig(src='/profile_pictures/user-add-icon.png')
-						span(style='font-size:20px;color: blue')=fname
-					| tagged in this photo, view her profile, and/or reshare this photo.
-				when "eon" : p 
-					| You have #{number} friends outside of 
-					a.ui.image.label
-						img.ig(src='/profile_pictures/user-add-icon.png')
-						span(style='font-size:20px;color: blue')=fname
-					| ’s network.
+					| ’s information.
 				default: p you need to select one case 
 		.actions
 			.ui.grid
