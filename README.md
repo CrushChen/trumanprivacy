@@ -18,12 +18,12 @@ https://pri.socialsandbox.xyz/pri?c=eo&fna=Na&una=Chen
 
 
 c means conditons
-  as means Boundary Access Self 
-  ao means Boundary Access Other 
-  cs means Boundary Control Self 
-  co means Boundary Control Other 
-  es means Boundary Extension Self 
-  eo means Boundary Extension Other 
+  as means Boundary Access Self ;
+  ao means Boundary Access Other ;
+  cs means Boundary Control Self ;
+  co means Boundary Control Other ;
+  es means Boundary Extension Self ;
+  eo means Boundary Extension Other ;
 
 
 
