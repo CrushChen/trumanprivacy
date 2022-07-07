@@ -14,6 +14,9 @@ Also special thanks to Sahat Yalkabov and his [Hackathon Starter](https://github
 URL conditions: 
 https://pri.socialsandbox.xyz/pri?c=eo&fna=Na&una=Chen
 
+
+
+
 c means conditons
   as means Boundary Access Self 
   ao means Boundary Access Other 
@@ -22,6 +25,11 @@ c means conditons
   es means Boundary Extension Self 
   eo means Boundary Extension Other 
 
+
+
+
 fna means friend name on Besties 
+
+
 
 una means user name on Besties 
