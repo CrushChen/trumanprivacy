@@ -10,3 +10,18 @@ This current iteration is testing the bystander effect on cyberbullying. Future 
 This project and software development was supported by the National Science Foundation through IIS-1405634. Special thanks to everyone at Cornell Social Media Lab in the Department of Communication. 
 
 Also special thanks to Sahat Yalkabov and his [Hackathon Starter](https://github.com/sahat/hackathon-starter) project, which provided the basic organization for this project. 
+
+URL conditions: 
+https://pri.socialsandbox.xyz/pri?c=eo&fna=Na&una=Chen
+
+c means conditons
+  as means Boundary Access Self 
+  ao means Boundary Access Other 
+  cs means Boundary Control Self 
+  co means Boundary Control Other 
+  es means Boundary Extension Self 
+  eo means Boundary Extension Other 
+
+fna means friend name on Besties 
+
+una means user name on Besties 
