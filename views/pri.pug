@@ -53,66 +53,80 @@ block content
 		.header(style='font-size:30px;') Do you want to proceed?
 		.content
 			case condis
-				when "as" : p(style='font-size:20px;') 
+				when "as" : p(style='font-size:15px;') 
 					| Please note that you have shared most of your photos with 
 					span(style='color: blue')  selected friends only 
 					| .
-				when "ao" : p 
+					br 
+					| By default, your photos will be shared with the public. You can change it in the privacy settings below.
+				when "ao" : p(style='font-size:15px;')  
 					| Please note that 
 					a.ui.image.label
 						img.ig(src='/profile_pictures/user-add-icon.png')
-						span(style='font-size:20px;color: blue')=fname
+						span(style='font-size:15px;color: blue')=fname
 					| has shared most of their photos with 
 					span(style='color: blue')  selected friends only 
 					| .
-				when "cs" : p 
+					br 
+					| By default, your photos will be shared with the public. You can change it in the privacy settings below.					
+				when "cs" : p(style='font-size:15px;')  
 					| Please note that, by tagging 
 					a.ui.image.label
 						img.ig(src='/profile_pictures/user-add-icon.png')
-						span(style='font-size:20px;color: blue')=fname
+						span(style='font-size:15px;color: blue')=fname
 					| , 
 					a.ui.image.label
 						img.ig(src='/profile_pictures/user-add-icon.png')
-						span(style='font-size:20px;color: blue')=fname
+						span(style='font-size:15px;color: blue')=fname
 					span(style='color: blue') will have editing rights 
 					| to these photos, the information you added to these photos (e.g., caption, tags), and managing the comments. 
-				when "co" : p 
+					br 
+					| By default, your photos will be shared with the public. You can change it in the privacy settings below.
+				when "co" : p(style='font-size:15px;')  
 					| Please note that 
 					a.ui.image.label
 						img.ig(src='/profile_pictures/user-add-icon.png')
-						span(style='font-size:20px;color: blue')=fname 
+						span(style='font-size:15px;color: blue')=fname 
 					span(style='color: blue') does not have editing rights 
 					| to these photos, the information you added to these photos (e.g., caption, tags), or managing the comments.
-				when "es" : p 
+					br 
+					| By default, your photos will be shared with the public. You can change it in the privacy settings below.
+				when "es" : p(style='font-size:15px;')  
 					| Please note that 
 					a.ui.image.label
 						img.ig(src='/profile_pictures/user-add-icon.png')
-						span(style='font-size:20px;color: blue')=fname 
+						span(style='font-size:15px;color: blue')=fname 
 					span(style='color: blue') ’s entire network 
 					| , including friends outside your network, can see you tagged in these photos, reshare the photos, and have access to your information.
-				when "eo" : p 
+					br 
+					| By default, your photos will be shared with the public. You can change it in the privacy settings below.
+				when "eo" : p(style='font-size:15px;')  
 					| Please note that
 					span(style='color: blue')  your entire network 
 					| , including friends outside 
 					a.ui.image.label
 						img.ig(src='/profile_pictures/user-add-icon.png')
-						span(style='font-size:20px;color: blue')=fname
+						span(style='font-size:15px;color: blue')=fname
 					| ’s network, can see 
 					a.ui.image.label
 						img.ig(src='/profile_pictures/user-add-icon.png')
-						span(style='font-size:20px;color: blue')=fname
+						span(style='font-size:15px;color: blue')=fname
 					| tagged in these photos, reshare the photos, and have access to
 					a.ui.image.label
 						img.ig(src='/profile_pictures/user-add-icon.png')
-						span(style='font-size:20px;color: blue')=fname
+						span(style='font-size:15px;color: blue')=fname
 					| ’s information.
-				default: p you need to select one case 
+					br 
+					| By default, your photos will be shared with the public. You can change it in the privacy settings below.
+				default: p(style='font-size:15px;')  you need to select one case 
 		.actions
 			.ui.grid
 				.col
 					.ui.labeled.icon.pointing.dropdown.button(style=' width: 250px;')
 						input#choice(type="hidden" name="choice")
-						span.text  Edit Photo Privacy Setting
+						.text 
+							i.globe.icon 
+							| Public
 						.menu
 							.p Who can see your post?
 							.header Your post will show up in Feed, on your profile and in search results.
