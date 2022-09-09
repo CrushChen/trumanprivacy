@@ -17,7 +17,9 @@ exports.getPri = (req, res, next) => {
    condis: req.query.c,
    fname: req.query.fna,
    uname: req.query.una,
-   number: req.query.nu
+   ufriends: req.query.uf,
+   ffriends: req.query.ff,
+   cfriends: req.query.cf
   })
 
   };

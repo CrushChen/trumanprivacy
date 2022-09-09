@@ -97,13 +97,17 @@ block content
 						img.ig(src='/profile_pictures/user-add-icon.png')
 						span(style='font-size:15px;color: blue')=fname 
 					span(style='color: blue') ’s entire network 
-					| , including friends outside your network, can see you tagged in these photos, reshare the photos, and have access to your information.
+					| , including 
+					span(style='font-size:15px;color: blue')=(ffriends-cfriends) 
+					|  friends outside your network, can see you tagged in these photos, reshare the photos, and have access to your information.
 					br 
 					| By default, your photos will be shared with the public. You can change it in the privacy settings below.
 				when "eo" : p(style='font-size:15px;')  
 					| Please note that
 					span(style='color: blue')  your entire network 
-					| , including friends outside 
+					| , including 
+					span(style='font-size:15px;color: blue')=(ufriends-cfriends) 
+					|  friends outside 
 					a.ui.image.label
 						img.ig(src='/profile_pictures/user-add-icon.png')
 						span(style='font-size:15px;color: blue')=fname
